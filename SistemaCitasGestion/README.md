@@ -1,24 +1,32 @@
-# SistemaCitasGestion - Evaluacion JavaFX & JDBC
+# Sistema de Gestión de Citas Técnicas - TecnoAsistencia Nicaragua S.A.
 
-Sistema de gestión de clientes y citas técnicas para la empresa **TecnoAsistencia Nicaragua S.A.**
-
-## Integrantes del Equipo
-- **Erick Arana** (@erick-espz) - *Integración final y arquitectura.*
-- **Brandon Rocha** (@BJavi2106) - *Capa de datos y modelo CitaTecnica.*
-- **Josue Reyes** (@castillozzzz) - *Vista FXML y controlador CitaController.*
-- **Julián Torrez** (@torrez-julian) - *Validación de calidad, pruebas de aceptación y documentación.*
+Aplicación de escritorio desarrollada en **JavaFX** conectada a una base de datos relacional **PostgreSQL** mediante **JDBC** para la gestión integral de clientes y citas técnicas de mantenimiento y reparación de equipos informáticos.
 
 ---
 
-## Requisitos
-- JDK 17+
-- JavaFX 17+
-- PostgreSQL 14+ (Docker o instalación nativa)
-- Maven 3.8+
+## Integrantes del Equipo y Distribución de Responsabilidades
+
+| Integrante | Usuario GitHub | Rol / Responsabilidades Asignadas |
+| :--- | :--- | :--- |
+| **Erick Espinosa** | [@erick-espz](https://github.com/erick-espz) | Integración final, arquitectura del proyecto, `ConexionBD` y coordinación. |
+| **Javier Berríos** | [@BJavi2106](https://github.com/BJavi2106) | Capa de datos (DAO) y modelo de la entidad `CitaTecnica`. |
+| **Josue Reyes / Castillo** | [@castillozzzz](https://github.com/castillozzzz) | Interfaces FXML, vistas y controlador `CitaController`. |
+| **Julián Torrez** | [@torrez-julian](https://github.com/torrez-julian) | Validación de datos (`Validador.nombreValido`), pruebas de aceptación y documentación técnica. |
 
 ---
 
-## Configuración de PostgreSQL
-1. Crear contenedor de PostgreSQL (o usar servicio local):
-   ```bash
-   docker run --name base-postgres -e POSTGRES_PASSWORD=su_clave -p 5433:5432 -d postgres
+##  Requisitos del Sistema
+- **Java Development Kit (JDK):** Versión 17 o superior.
+- **JavaFX SDK:** Versión 17 o superior.
+- **Motor de Base de Datos:** PostgreSQL 14+ (Instalación nativa o Docker).
+- **Gestor de Dependencias:** Maven 3.8+.
+- **Entorno de Desarrollo (IDE):** IntelliJ IDEA.
+
+---
+
+##  Configuración e Instalación de la Base de Datos PostgreSQL
+
+1. **Creación de la Base de Datos:**
+   Abre **pgAdmin 4** (o la consola `psql`) y crea la base de datos:
+   ```sql
+   CREATE DATABASE gestion_citas;
